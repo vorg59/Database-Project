@@ -117,3 +117,22 @@ copy {
     margin-top: 20px;
 }
 
+.search-bar{
+    background:rgb(13, 174,174);
+    width: 70%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+}
+.search-bar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-bar form input{
+    display: block;
+    border: 0;
+    outline: none;
+    background: transparent;
+
+}

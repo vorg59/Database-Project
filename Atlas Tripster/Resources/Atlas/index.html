@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATLAS TRIPSTER</title>
+    <title><img src="logo2.png">ATLAS TRIPSTER</title>
     <link rel="stylesheet" href="style.css">
+    <script src="backend1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/476f5c0c88.js" crossorigin="anonymous"></script>
 </head>
@@ -13,13 +14,37 @@
             <nav>
                 <div class="brand"><h1 class="animate__heartBeat">ATLAS TRIPSTER</div></h1>
                 <div class="menu">
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="#">Book</a>
                     <a href="#">Services</a>
-                    <a href="http://127.0.0.1:5500/login.html">Login</a>
+                    <a href="login.html">Login</a>
                 </div>
             </nav>
     </header>
+    <div class="search-bar">
+        <form>
+            <div>
+                <label>Location</label>
+                <input type="text" placeholder="Enter Destination">
+            </div>
+            <div>
+                <label>Departure</label>
+                <input type="text" placeholder="Journey Start Date">
+            </div>
+            <div>
+                <label>Arrival</label>
+                <input type="text" placeholder="Journey End Date">
+            </div>
+            <div>
+                <label>Guests</label>
+                <input type="text" placeholder="Guests">
+            </div>
+            <button type="submit"><img src="magnifying-glass.png"width=32px></button>
+        </form>
+
+
+
+    </div>
     
     <footer>
         <div class="row">
