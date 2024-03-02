@@ -118,11 +118,12 @@ copy {
 }
 
 .search-bar{
-    background:rgb(13, 174,174);
+    background: linear-gradient(to right, #213398, #47024a);
     width: 70%;
     margin: 30px auto;
     padding: 6px 10px 6px 30px;
     border-radius: 50px;
+    color: white;
 }
 .search-bar form{
     display: flex;
