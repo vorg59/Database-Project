@@ -134,5 +134,14 @@ copy {
     border: 0;
     outline: none;
     background: transparent;
-
+}
+.search-bar form button{
+    background: #ff5361;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    
 }
