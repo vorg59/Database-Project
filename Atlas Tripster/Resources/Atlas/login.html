@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script src="https://kit.fontawesome.com/476f5c0c88.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="h">
+        <div class="form">
+            <div class="buttonbox">
+                <div id="btn"></div>
+                <button type="button" class="t" onclick="login()">Log in</button>
+                <button type="button" class="t" onclick="signup()">Register</button>
+            </div>
+            <div class="socialicons">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.nu.edu.pk/"><i class="fab fa-twitter"></i></a>
+            </div>
+            <form id="login" class="inputgroup">
+                <input type="text" class="inputfield" placeholder="User name" required>
+                <input type="text" class="inputfield" placeholder="Password" required>
+                <input type="checkbox" class="check"><span>Remember me</span>
+                <button type="submit" class="submit">Login in</button>
+            </form>
+
+            <form id="signup" class="inputgroup">
+                <input type="text" class="inputfield" placeholder="User name" required>
+                <input type="text" class="inputfield" placeholder="Email id" required>
+                <input type="text" class="inputfield" placeholder="Password" required>
+                <input type="checkbox" class="check"><span>Agree to terms and conditions</span>
+                <button type="submit" class="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
