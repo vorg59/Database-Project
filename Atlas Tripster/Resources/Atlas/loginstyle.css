@@ -39,12 +39,14 @@
     outline: none;
     position: relative;
     border: none; 
-    border-radius: 30px;
+    border-radius: 40px;
     color: black;
+    text-decoration: 0;
+    text-size-adjust: 12px;
 }
 #btn{
     top: 9; left: 2; position: absolute; width: 10px; height: 40px;
-    background: linear-gradient(to right, #031893, #6e035b);
+    /*background: linear-gradient(to right, #031893, #6e035b);*/
     border-radius: 30px;
     transition: .5s;
 }
@@ -116,12 +118,5 @@
     left: 50px;
 }
 #signup{
-    left: 450px;
-}
-.preloader{
-    width: 100%;
-    height: 100vh;
-    background: #ffffff url("loader.mp4");
-    position: fixed;
-    z-index: 100;
+    left: 50px;
 }
