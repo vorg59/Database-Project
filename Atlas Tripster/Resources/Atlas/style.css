@@ -137,7 +137,8 @@ copy {
     background: transparent;
 }
 .search-bar form button{
-    background: #ff5361;
+    background: transparent;
+    color: white;
     width: 55px;
     height: 55px;
     border-radius: 50%;
