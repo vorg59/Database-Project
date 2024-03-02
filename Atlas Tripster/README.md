@@ -1,0 +1,1 @@
+The "Travel Planner and Accommodation Selector" website aims to provide a comprehensive platform for users to plan their travel itineraries efficiently while seamlessly selecting accommodations that suit their preferences and budget.
