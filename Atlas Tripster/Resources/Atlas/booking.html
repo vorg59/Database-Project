@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATLAS TRIPSTER | Booking</title>
+    <link rel="stylesheet" href="BookingStyle.css">
     <link rel="stylesheet" href="style.css">
     <script src="backend1.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -21,9 +22,33 @@
             </div>
         </nav>
 </header>
-<div>
+<div class="backgrnd">
+    <div class="booking-form">
+        <h2>Online Booking</h2>
+        <form action="">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" id="inp-name" required>
 
-    <h1></h1>
+            <label for="Email">Email</label>
+            <input type="text" name="Email" id="inp-email" required>
+
+            <label for="Destination">Destination</label>
+            <input type="text" name="Destination" id="inp-destination" required>
+
+            <label for="Departure-date">Departure</label>
+            <input type="date" name="Departure-date" id="inp-DDate" required>
+
+            <label for="Return-date">Return</label>
+            <input type="date" name="Return-date" id="inp-RDate" required>
+
+            <label for="persons">Passengers</label>
+            <input type="number" name="persons" id="inp-person" required>
+
+            <button type="submit">Book Now</button>
+
+
+        </form>
+    </div>
 </div>
 <footer>
     <div class="row">
