@@ -5,14 +5,9 @@
     padding: 0;  
     font-family: 'Josefin Sans', 'sans-serif';
     box-sizing: border-box; 
-    color: black;
     font-weight: bolder;
 }
-body,html{
-    height: 100%;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
+
 .backgrnd{
     background-image: url(p.jpg);
     background-size: cover;
@@ -29,14 +24,10 @@ body,html{
     max-width: 500px;
     width: 80%;
     margin: 6% auto;
-
-    
     position: relative;
-    background: rgb(230, 210, 228);
+    background: rgb(248, 240, 241);
     padding: 5px;
     color: black;
-
-    
 }
 .booking-form h2{
     text-align: center;
@@ -46,9 +37,16 @@ body,html{
     flex-direction: column;
 }
 .booking-form input{
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+     width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #8f42a6;
+    outline: none;
+    background: transparent;
+    color: black;
 }
 .booking-form button{
     margin-top: 10px;
