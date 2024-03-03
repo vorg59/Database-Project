@@ -135,6 +135,33 @@ ul li a{
     margin-top: 10px; 
 }
 
+.cont li {
+    list-style: none;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+
+.cont li a {
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    margin: 2px;
+}
+
+.cont li i {
+    font-size: 20px; 
+    width: 30px;  height: 30px; 
+    line-height: 30px;
+    color: #2d0b00; background: #fff;
+    border-radius: 50%; text-align: center;
+    margin-right: 20px; cursor: pointer;
+}
+
+.cont li:first-child a {
+    text-decoration: none;
+    color: white;
+    border-bottom: none;
+}
 .socialicons {
     margin-top: 10px; 
 }
