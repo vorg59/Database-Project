@@ -13,14 +13,15 @@
 <body>
     <header>
         <nav>
-            <div class="brand"><h1 class="animate__heartBeat"><img src="logo2.png"></div></h1>
+            <a href="index.html"><div class="brand"><h1 class="animate__heartBeat"><img src="logo2.png"></div></h1></a>
             <div class="menu">
                 <a href="index.html">Home</a>
-                <a href="#">Booking</a>
+                <a href="booking.html">Booking</a>
                 <a href="#">Services</a>
                 <a href="login.html">Login/Sign Up</a>
             </div>
         </nav>
+
 </header>
 <div class="backgrnd">
     <div class="booking-form">
@@ -36,16 +37,21 @@
             <input type="text" name="Destination" id="inp-destination" required>
 
             <label for="Departure-date">Departure</label>
-            <input type="date" name="Departure-date" id="inp-DDate" required>
+            <input type="date" class="date-in" name="Departure-date" id="inp-DDate" required>
 
             <label for="Return-date">Return</label>
-            <input type="date" name="Return-date" id="inp-RDate" required>
+            <input type="date" class="date-in" name="Return-date" id="inp-RDate" required>
 
             <label for="persons">Passengers</label>
             <input type="number" name="persons" id="inp-person" required>
-
-            <button type="submit">Book Now</button>
-
+            
+            <label for="class">Class</label>
+            <select name="class" id="inp-class" required>
+                <option value="select">Select</option>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+            </select>
+            <a href="features.html">Proceed</a>
 
         </form>
     </div>
@@ -53,7 +59,7 @@
 <footer>
     <div class="row">
         <div class="col">
-            <img src="logo2.png" class="flogo">
+            <a href="index.html"><img src="logo2.png" class="flogo"></a>
             <p>Our website will streamline the entire travel planning process.</p>
         </div>
         <div class="col">
@@ -65,9 +71,8 @@
         <div class="col">
             <h2>Links</h2>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
             </ul>
         </div>
         <div class="col">

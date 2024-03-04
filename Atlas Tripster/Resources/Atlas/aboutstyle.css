@@ -27,4 +27,13 @@
 .abt-us h3{
     font-weight: 600;
     margin-top: 10px;
+    align-items: center;
+    margin-left: 12px;
+    padding: 12px;
+}
+.abt-us p{
+    align-items: center;
+    margin-left: 12px;
+    padding: 12px;
+    margin-right: 12px;
 }

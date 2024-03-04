@@ -5,6 +5,7 @@
     box-sizing: border-box; 
     color: black;
     font-weight: bolder;
+    font-size: 14px;
 }
 .h {
     height: 100%;
