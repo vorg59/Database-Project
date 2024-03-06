@@ -256,6 +256,10 @@ copy {
 .exclusives div img{
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
+}
+.exclusives div img:hover{
+    transition: ease-in-out 0.5s;
 }
 .exclusives div{
     position: relative;
@@ -267,6 +271,13 @@ copy {
     transform: translate(-50%,-50%);
     text-align: center;
     color: #fff;
+    cursor: pointer;
+}
+.exclusives div span h3{
+    cursor: pointer;
+}
+.exclusives div span h3:hover{
+    transition: ease-in-out 0.5s;
 }
 .trending{
     display: grid;
