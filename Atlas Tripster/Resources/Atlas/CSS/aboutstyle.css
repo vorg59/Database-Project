@@ -1,0 +1,39 @@
+﻿body {
+    font-family: 'Poppins', sans-serif;
+}
+.abt-msg {
+    text-align: center;
+    background: #213398;
+    color: #fff;
+
+    padding: 12px 30px;
+    border-radius: 8px;
+    align-items: center;
+    margin: 20px auto;
+    margin-right: 30px auto;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+.abt-us{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+.abt-us div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.abt-us h3{
+    font-weight: 600;
+    margin-top: 10px;
+    align-items: center;
+    margin-left: 12px;
+    padding: 12px;
+}
+.abt-us p{
+    align-items: center;
+    margin-left: 12px;
+    padding: 12px;
+    margin-right: 12px;
+}
