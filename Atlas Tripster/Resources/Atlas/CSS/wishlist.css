@@ -28,6 +28,7 @@ h1 {
     width: 200px;
     color:  #ccc; 
     margin-left: auto; 
+    cursor: pointer;
     margin-right: 10px; /
   }
   .createfolder:hover {

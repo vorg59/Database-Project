@@ -295,10 +295,10 @@ copy {
 }
 .cta{
     margin: 80px 0;
-    background-image: linear-gradient(to right,#3f2321,transparent),url(images/banner-2.png);
+    background-image: linear-gradient(to right,#3f2321,transparent);
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 5%;
     color: #fff;
 }
