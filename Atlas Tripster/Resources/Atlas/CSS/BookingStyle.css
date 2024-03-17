@@ -8,7 +8,7 @@
 }
 
 .backgrnd{
-    background-image: url(/Resources/Atlas/IMAGES/ba.jpg);
+    background-image: url("/Atlas Tripster/Resources/Atlas/IMAGES/ba.jpg");
     background-size: cover;
     background-position: center;
     height: 100%;
