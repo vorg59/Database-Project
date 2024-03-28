@@ -223,7 +223,7 @@ copy {
 .search-bar form button{
     width: 55px;
     height: 55px;
-    background-color: #3f2321;
+    background-color: #f1edec;
     border-radius: 50%;
     border: 0;
     outline: none;
@@ -236,14 +236,26 @@ copy {
 .location-input{
     flex: 1;
 }
+.location-input input{
+    color: white;
+}
 .departure-input{
     flex: 0.5;
+}
+.departure-input input{
+color: white;
 }
 .arrival-input{
     flex: 0.5;
 }
+.arrival-input input{
+    color: white;
+}
 .guests-input{
     flex: 0.5;
+}
+.guests-input input{
+    color: white;
 }
 .search-bar form label{
     font-weight: 600;
