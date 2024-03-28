@@ -92,3 +92,7 @@
 .container form .submit-btn hover{
     background: rgb(204, 114, 129);
 }
+
+.col .inputbox img{
+    width: 32px;
+}
