@@ -107,6 +107,9 @@ footer{
     text-decoration: none;
     color: white;
 }
+.col p{
+    color: white;
+}
 .emailid{
     width: fit-content;
     border-bottom: 1px solid #ccc;
@@ -128,6 +131,7 @@ ul li a{
     flex-direction: column;
 }
 .col h2 {
+    color: white;
     margin-bottom: 10px; 
 }
 

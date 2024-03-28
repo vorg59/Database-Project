@@ -68,3 +68,10 @@
     transform: scale(1.07);
 }
 
+h3{
+    text-align: center;
+    font-size: 32px;
+}
+h2{
+    font-size: 20px;
+}

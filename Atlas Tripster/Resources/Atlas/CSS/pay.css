@@ -87,10 +87,7 @@
     color: black;
     margin-top: 5px;
     cursor: pointer;
-}
-
-.container form .submit-btn hover{
-    background: rgb(204, 114, 129);
+    border-radius: 50px;
 }
 
 .col .inputbox img{
