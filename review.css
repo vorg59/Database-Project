@@ -1,150 +1,8 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif
-}
-
-header {
-  /*background-image: url("assets/bg.png");*/
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-}
-
-.containers{
-  position: relative;
-  width: 400px;
-  background: #111;
-  padding: 20px 30px;
-  border: 1px solid #444;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.containers .post{
-  display: none;
-}
-.containers .text{
-  font-size: 25px;
-  color: #666;
-  font-weight: 500;
-}
-.containers .edit{
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 16px;
-  color: #666;
-  font-weight: 500;
-  cursor: pointer;
-}
-.containers .edit:hover{
-  text-decoration: underline;
-}
-.containers .star-widget input{
-  display: none;
-}
-.star-widget label{
-  font-size: 40px;
-  color: #444;
-  padding: 10px;
-  float: right;
-  transition: all 0.2s ease;
-}/*
-input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label{
-  color: #fd4;
-}
-input:checked ~ label{
-  color: #fd4;
-}
-input#rate-5:checked ~ label{
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
-}
-#rate-1:checked ~ form header:before{
-  content: "I just hate it ";
-}
-#rate-2:checked ~ form header:before{
-  content: "I don't like it ";
-}
-#rate-3:checked ~ form header:before{
-  content: "It is awesome ";
-}
-#rate-4:checked ~ form header:before{
-  content: "I just like it ";
-}
-#rate-5:checked ~ form header:before{
-  content: "I just love it ";
-}
-.container form{
-  display: none;
-}
-input:checked ~ form{
-  display: block;
-}
-form header{
-  width: 100%;
-  font-size: 25px;
-  color: #fe7;
-  font-weight: 500;
-  margin: 5px 0 20px 0;
-  text-align: center;
-  transition: all 0.2s ease;
-}
-form .textarea{
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-}
-form .textarea textarea{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  color: #eee;
-  border: 1px solid #333;
-  background: #222;
-  padding: 10px;
-  font-size: 17px;
-  resize: none;
-}
-.textarea textarea:focus{
-  border-color: #444;
-}
-form .btn{
-  height: 45px;
-  width: 100%;
-  margin: 15px 0;
-}
-form .btn button{
-  height: 100%;
-  width: 100%;
-  border: 1px solid #444;
-  outline: none;
-  background: #222;
-  color: #999;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-form .btn button:hover{
-  background: #1b1b1b;
-}
-*/
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin-top: 100px;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 10rem;
 }
 
@@ -152,11 +10,9 @@ form .btn button:hover{
   margin-bottom: 2rem;
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--primary-color);
 }
 
 .container__left p {
-  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
@@ -166,12 +22,8 @@ form .btn button:hover{
   outline: none;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(
-    to right,
-    var(--primary-color),
-    var(--primary-color-dark)
-  );
-  color: var(--white);
+  background: linear-gradient(to right, #00093c, #2d0b00);
+  color: white;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -186,7 +38,7 @@ form .btn button:hover{
   display: flex;
   align-items: flex-start;
   gap: 2rem;
-  background-color: var(--white);
+  background-color: white;
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -204,40 +56,21 @@ form .btn button:hover{
 
 .card__content span i {
   font-size: 2rem;
-  color: var(--primary-color);
+  color: #6c1e04;
 }
 
 .card__details p {
   font-style: italic;
-  color: var(--text-dark);
+  color: black;
   margin-bottom: 1rem;
 }
 
 .card__details h4 {
   text-align: right;
-  color: var(--primary-color);
+  color: #6c1e04;
+  font-weight: bold;
   font-size: 1rem;
   font-weight: 500;
 }
 
-@media (width < 1200px) {
-  .container {
-    gap: 3rem;
-  }
-}
 
-@media (width < 900px) {
-  .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .container__right {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width < 750px) {
-  .container__right {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
