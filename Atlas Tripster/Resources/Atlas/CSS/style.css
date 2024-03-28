@@ -69,7 +69,7 @@ footer{
         line-height: 20px;
         margin-top: auto;
         border-top-left-radius: 150px;
-        position: relative;
+        position: absolute;
         line-height: 20px;
         margin-top: auto; 
 }
