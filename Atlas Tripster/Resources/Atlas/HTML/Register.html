@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="/Atlas Tripster/Resources/Atlas/CSS/loginstyle.css">
     <link rel="stylesheet" href="/Atlas Tripster/Resources/Atlas/CSS/style.css">
-    <script src="/Atlas Tripster/Resources/Atlas/JS/backend1.js"></script>
+   
     <script src="https://kit.fontawesome.com/476f5c0c88.js" crossorigin="anonymous"></script>
     <title>ATLAS TRIPSTER | Register</title>
 </head>
@@ -34,7 +34,7 @@
                 <a href="https://www.nu.edu.pk/"><i class="fab fa-google"></i></a>
             </div>
            
-            <form id="signup" class="inputgroup" action="/Atlas Tripster/Resources/Atlas/conectivity/register_connect.php" method="post">
+            <form id="signup" class="inputgroup" action="/signup" method="POST">
                 <input type="text" class="inputfield" id="username" name="username" placeholder="User name" required>
                 <input type="email" class="inputfield" id="email" name="email" placeholder="Email id" required>
                 <input type="password" class="inputfield" id="password" name="password" placeholder="Password" required>
@@ -43,5 +43,6 @@
             </form>
         </div>
     </div>
+    <script src="/Atlas Tripster/Resources/Atlas/backend/register.js"></script>
 </body>
 </html>
