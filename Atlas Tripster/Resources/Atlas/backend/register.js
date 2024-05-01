@@ -7,7 +7,7 @@ const app = express();
 const config = {
     user: 'sa',
     password: '1234',
-    server: 'localhost:/http://127.0.0.1',
+    server: 'DESKTOP-J9DEB11\SQLEXPRESS',
     database: 'p',
 };
 
