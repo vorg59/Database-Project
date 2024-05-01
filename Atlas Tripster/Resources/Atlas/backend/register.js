@@ -1,46 +1,49 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const sql = require('mssql');
 
 const app = express();
 
-// Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// Database configuration
+// Configure database connection
 const config = {
-  user: 'your_username',
-  password: 'your_password',
-  server: 'your_server_address',
-  database: 'your_database_name',
-  options: {
-    encrypt: true // If you're connecting to Azure, you may need encryption
-  }
+    user: 'sa',
+    password: '1234',
+    server: 'localhost:/sqlexpress',
+    database: 'p',
 };
 
-// Route to handle signup POST request
+// Function to handle signup form submission
+async function signUp(username, email, password) {
+    try {
+        // Connect to the database
+        await sql.connect(config);
+
+        // Create a new user record
+        await sql.query`INSERT INTO Users (Username, Email, Password) VALUES (${username}, ${email}, ${password})`;
+
+        // Close the connection
+        await sql.close();
+
+        return { success: true, message: "User signed up successfully!" };
+    } catch (err) {
+        console.error('SQL error:', err);
+        return { success: false, message: "Error signing up user. Please try again later." };
+    }
+}
+
+// Express route for signup form submission
+app.use(express.json()); // Middleware to parse JSON bodies
 app.post('/signup', async (req, res) => {
-  const { username, email, password } = req.body;
+    const { username, email, password } = req.body;
 
-  try {
-    // Connect to the database
-    await sql.connect(config);
+    // Call the signup function
+    const result = await signUp(username, email, password);
 
-    // Insert user data into the database
-    const result = await sql.query`INSERT INTO Users (username, email, password) VALUES (${username}, ${email}, ${password})`;
-
-    console.log('User added successfully:', result);
-
-    // Send response to client
-    res.status(200).send('User added successfully');
-  } catch (error) {
-    console.error('Error adding user:', error);
-    res.status(500).send('Error adding user');
-  }
+    // Send response back to client
+    res.json(result);
 });
 
 // Start the server
-const port = 5501;
+const port = process.env.PORT || 5501;
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });
