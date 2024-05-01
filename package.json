@@ -10,6 +10,7 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
-    "mongoose": "^8.3.3"
+    "mongoose": "^8.3.3",
+    "mssql": "^10.0.2"
   }
 }
