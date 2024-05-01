@@ -1,4 +1,4 @@
-const express = require('express');
+var express = require('express');
 const sql = require('mssql');
 
 const app = express();
