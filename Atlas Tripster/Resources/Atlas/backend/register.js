@@ -7,7 +7,7 @@ const app = express();
 const config = {
     user: 'sa',
     password: '1234',
-    server: 'localhost:/sqlexpress',
+    server: 'localhost:/http://127.0.0.1',
     database: 'p',
 };
 
