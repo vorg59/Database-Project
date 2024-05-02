@@ -1,5 +1,5 @@
-var express = require('express');
-const sql = require('mssql');
+import express, { json } from 'express';
+import { connect, query, close } from 'mssql';
 
 const app = express();
 
@@ -7,31 +7,41 @@ const app = express();
 const config = {
     user: 'sa',
     password: '1234',
-    server: 'DESKTOP-J9DEB11\SQLEXPRESS',
+    server: 'DESKTOP-J9DEB11\\SQLEXPRESS',
     database: 'p',
 };
+
+// Function to handle database connection
+async function connectToDatabase() {
+    try {
+        await connect(config);
+        console.log('Connected to database');
+    } catch (err) {
+        console.error('Error connecting to database:', err);
+    }
+}
 
 // Function to handle signup form submission
 async function signUp(username, email, password) {
     try {
         // Connect to the database
-        await sql.connect(config);
+        await connectToDatabase();
 
         // Create a new user record
-        await sql.query`INSERT INTO Users (Username, Email, Password) VALUES (${username}, ${email}, ${password})`;
-
-        // Close the connection
-        await sql.close();
+        await query`INSERT INTO Users (Username, Email, Password) VALUES (${username}, ${email}, ${password})`;
 
         return { success: true, message: "User signed up successfully!" };
     } catch (err) {
         console.error('SQL error:', err);
         return { success: false, message: "Error signing up user. Please try again later." };
+    } finally {
+        // Close the connection
+        await close();
     }
 }
 
 // Express route for signup form submission
-app.use(express.json()); // Middleware to parse JSON bodies
+app.use(json()); // Middleware to parse JSON bodies
 app.post('/signup', async (req, res) => {
     const { username, email, password } = req.body;
 

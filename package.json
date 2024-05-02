@@ -1,22 +1,15 @@
 {
   "name": "database-project",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Your project description",
+  "main": "register.cjs", 
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon api.js"
+    "start": "node register.cjs"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.19.2",
-    "mongoose": "^8.3.3",
-    "msnodesqlv8": "^4.2.1",
     "mssql": "^10.0.2",
-    "node": "^22.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "3.1.0"
+    "node": "^22.0.0" 
   }
 }
