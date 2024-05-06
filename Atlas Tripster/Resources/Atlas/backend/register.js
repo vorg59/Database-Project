@@ -1,59 +1,50 @@
-import express, { json } from 'express';
-import { connect, query, close } from 'mssql';
+const express = require('express');
+const bodyParser = require('body-parser');
+const sql = require('mssql');
+const path = require('path'); // Import the path module
 
 const app = express();
 
-// Configure database connection
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Database configuration
 const config = {
-    user: 'sa',
-    password: '1234',
-    server: 'DESKTOP-J9DEB11\\SQLEXPRESS',
-    database: 'p',
+  user: 'sa',
+  password: '1234',
+  server: 'localhost\\DESKTOP-J9DEB11\\SQLEXPRESS',
+  database: 'p',
+  options: {
+    encrypt: true // If you're connecting to Azure, you may need encryption
+  }
 };
 
-// Function to handle database connection
-async function connectToDatabase() {
-    try {
-        await connect(config);
-        console.log('Connected to database');
-    } catch (err) {
-        console.error('Error connecting to database:', err);
-    }
-}
-
-// Function to handle signup form submission
-async function signUp(username, email, password) {
-    try {
-        // Connect to the database
-        await connectToDatabase();
-
-        // Create a new user record
-        await query`INSERT INTO Users (Username, Email, Password) VALUES (${username}, ${email}, ${password})`;
-
-        return { success: true, message: "User signed up successfully!" };
-    } catch (err) {
-        console.error('SQL error:', err);
-        return { success: false, message: "Error signing up user. Please try again later." };
-    } finally {
-        // Close the connection
-        await close();
-    }
-}
-
-// Express route for signup form submission
-app.use(json()); // Middleware to parse JSON bodies
+// Route to handle signup POST request
 app.post('/signup', async (req, res) => {
-    const { username, email, password } = req.body;
+  const { username, email, password } = req.body;
 
-    // Call the signup function
-    const result = await signUp(username, email, password);
+  try {
+    // Connect to the database
+    await sql.connect(config);
 
-    // Send response back to client
-    res.json(result);
+    // Insert user data into the database
+    const result = await sql.query`INSERT INTO Users (username, email, password) VALUES (${username}, ${email}, ${password})`;
+
+    console.log('User added successfully:', result);
+
+    // Send response to client
+    res.status(200).send('User added successfully');
+  } catch (error) {
+    console.error('Error adding user:', error);
+    res.status(500).send('Error adding user');
+  } finally {
+    // Close the database connection
+    sql.close();
+  }
 });
 
 // Start the server
-const port = process.env.PORT || 5501;
+const port = 5500;
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
