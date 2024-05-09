@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+}
+
+.container__right button {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, #1b2871, #a32c04);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.container__left {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card img {
+  max-width: 85px;
+  border-radius: 100%;
+}
+
+.card__content {
+  display: flex;
+  gap: 1rem;
+}
+
+.card__content span i {
+  font-size: 2rem;
+  color: rgb(82, 37, 4);
+}
+
+.card__details p {
+  font-style: italic;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 550;
+}
+
+.card__details h4 {
+  text-align: right;
+  color: rgb(82, 37, 4);
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.container .container__right .textarea .star-widget i{
+  font-size: 20px;
+  margin-left: 3px;
+  margin-top: 10px;
+  color: #00093c;
+  padding: 8px;
+  transition: all 0.2s ease;
+}
+
+.container__right textarea {
+    width: 100%;
+    margin-top: 2rem;
+    height: 150px; /* Adjust height as needed */
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); 
+    resize: none;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    outline: none;
+  }
+  
+  .container__right .textarea h4 {
+    color: black;
+    
+    margin-top: 20px; /* Add space from above */
+    font-size: 1.5rem; /* Increase font size */
+  }
+  

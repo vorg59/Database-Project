@@ -1,0 +1,10 @@
+.hotels h3{
+    margin-top: 12px;
+    text-decoration: none;
+    text-align: center;    
+}
+.transport h3{
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 100;
+}

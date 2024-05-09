@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;  
+    font-family: 'Josefin Sans', 'sans-serif';
+    box-sizing: border-box; 
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.h {
+    height: 100%;
+    width: 100%;
+    background-image: url("back.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+    color: black;
+}
+.buttonbox{
+    width: 220px;
+    margin: 35px auto;
+    position: center relative;
+    box-shadow: 0 0 10px 2px #950e9543;
+    border-radius: 40px;
+    
+}
+.t{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    border: none; 
+    border-radius: 40px;
+    color: black;
+    text-decoration: 0;
+    text-size-adjust: 12px;
+}
+#btn{
+    top: 9; left: 2; position: absolute; width: 10px; height: 40px;
+    /*background: linear-gradient(to right, #031893, #6e035b);*/
+    border-radius: 30px;
+    transition: .5s;
+}
+.socialiconss {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.socialiconss a {
+    display: inline-block;
+}
+
+.socialiconss .fa-facebook-f, .socialiconss .fa-apple, .socialiconss .fa-google {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    box-shadow: 0 0 10px #cb28873d;
+    color: #00093c;
+    background: #f5f1f493;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+    cursor: pointer;
+
+    
+}
+.inputgroup {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    color: black;
+}
+.inputfield{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #953593;
+    outline: none;
+    background: transparent;
+    color: black;
+}
+.submit{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #7783c1, #ad7ea4);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check{
+    margin: 30px 10px 30px 0;
+}
+.span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login{
+    left: 50px;
+}
+#signup{
+    left: 50px;
+}
+
